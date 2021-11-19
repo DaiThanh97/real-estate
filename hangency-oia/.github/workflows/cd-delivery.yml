@@ -1,0 +1,41 @@
+name: cd-delivery
+
+on:
+  workflow_call:
+    inputs:
+      k8s_environment:
+        required: true
+        type: string
+      k8s_namespace:
+        required: true
+        type: string
+      docker_image_tag:
+        required: true
+        type: string
+      docker_repo_url:
+        required: true
+        type: string
+    secrets:
+      k8s_config:
+        required: true
+
+jobs:
+  deploy-and-verify:
+    name: Deploy and verify deployment
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # Set new image for deployment in k8s. Defaults to latest kubectl binary version
+      - name: deploy to cluster
+        uses: steebchen/kubectl@v2.0.0
+        with:
+          config: ${{ secrets.k8s_config }}
+          command: set image --record deployment/${{ inputs.k8s_environment }}-hagency ${{ inputs.k8s_environment }}-hagency=${{ inputs.docker_repo_url }}:${{ inputs.docker_image_tag }} -n ${{ inputs.k8s_namespace }}
+
+      # Verify deployment
+      - name: verify deployment
+        uses: steebchen/kubectl@v2.0.0
+        with:
+          config: ${{ secrets.k8s_config }}
+          command: rollout status deployment/${{ inputs.k8s_environment }}-hagency -n ${{ inputs.k8s_namespace }}

@@ -1,0 +1,63 @@
+[
+  {
+    "streetNumber": "23",
+    "cityId": 23,
+    "districtId": 35,
+    "wardId": 36,
+    "streetId": 48,
+    "urgentLevelId": 38,
+    "locationTypeId": 39,
+    "description": "4343",
+    "generalNote": "3443",
+    "price": 43,
+    "attachments": [
+      {
+        "key": "1602212515309",
+        "mimeType": "image/png",
+        "fileName": "review_bds.png",
+        "url": "https://hspace-storage-qa.s3.ap-east-1.amazonaws.com/1602212515309",
+        "size": "499493"
+      },
+      {
+        "key": "1602212521297",
+        "mimeType": "text/plain",
+        "fileName": "saveOrder36.docx",
+        "url": "https://hspace-storage-qa.s3.ap-east-1.amazonaws.com/1602212521297",
+        "size": "9719"
+      }
+    ],
+    "dealStage": "Đang giao dịch",
+    "landPlot": "54",
+    "map": "45",
+    "horizontalFront": 54,
+    "horizontalBack": 54,
+    "height1": 45,
+    "height2": 45,
+    "propertyTypeId": 40,
+    "propertyPeriodId": 41,
+    "propertyUsingId": 42,
+    "recognizedArea": 54,
+    "unrecognizedArea": 54,
+    "recognizedPlanningArea": 54,
+    "constructionCurrentStage": "Không có công trình",
+    "status": "Chờ duyệt",
+    "propertyBookmarks": [
+      {
+        "id": 13,
+        "createdAt": "2020-10-18T16:10:23.570Z",
+        "updatedAt": "2020-10-18T16:10:23.570Z",
+        "propertyId": 44,
+        "bookmarkerId": 2,
+        "bookmarkDate": "2020-10-18T16:10:23.548Z",
+        "isActive": true,
+        "bookmarker": {
+            "id": 2,
+            "type": "Admin",
+            "identityName": "admin",
+            "code": "admin",
+            "displayName": "admin"
+        }
+      }
+    ]
+  }
+]

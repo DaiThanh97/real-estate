@@ -1,0 +1,47 @@
+version: '3.0'
+
+services:
+  db:
+    image: 'postgres:12.4-alpine'
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+    volumes:
+      - ./seed:/docker-entrypoint-initdb.d:ro
+      - hspace-data:/var/lib/postgresql/data
+
+  migration:
+    image: 'hspace/migration:${TAG:-latest}'
+    build:
+      context: .
+      dockerfile: Dockerfile.migration
+    depends_on:
+      - db
+    env_file:
+      - ./.env.migration
+    environment:
+      - TYPEORM_URL=postgres://postgres:${POSTGRES_PASSWORD}@db/${POSTGRES_DB}
+
+  api_socket:
+    image: 'hspace/api_socket:${TAG:-latest}'
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+      - 8888:8888
+    depends_on:
+      - db
+    env_file:
+      - ./.env
+    environment:
+      - TYPEORM_URL=postgres://postgres:${POSTGRES_PASSWORD}@db/${POSTGRES_DB}
+      - TYPEORM_ENTITIES
+      - TYPEORM_ENTITIES_DIR
+
+volumes:
+  hspace-data:
+

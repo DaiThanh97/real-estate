@@ -1,0 +1,502 @@
+{
+    "employees": 
+    [
+        {
+            "id": 13,
+            "createdAt": "2020-10-15T07:12:30.017Z",
+            "updatedAt": "2020-10-16T04:36:25.906Z",
+            "createdBy": {
+                "id": 2,
+                "type": "Admin",
+                "identityName": "admin",
+                "code": "admin",
+                "displayName": "admin"
+            },
+            "updatedBy": {
+                "id": 2,
+                "type": "Admin",
+                "identityName": "admin",
+                "code": "admin",
+                "displayName": "admin"
+            },
+            "code": "NVD",
+            "fullName": "Nguyen Van D",
+            "birthday": "2020-10-13",
+            "joinedDate": "2020-10-13",
+            "phone": "0999999999",
+            "email": "D@gmail.com",
+            "departmentId": 99,
+            "titleId": 100,
+            "managerId": 8,
+            "statusId": 102,
+            "employeeLimits": [
+                {
+                "id": 52,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "typeId": 103,
+                "employeeId": 13,
+                "value": 1,
+                "isActive": true,
+                "type": {
+                    "id": 103,
+                    "createdAt": "2020-10-09T05:35:45.124Z",
+                    "updatedAt": "2020-10-09T08:00:12.980Z",
+                    "groupId": 47,
+                    "parentId": null,
+                    "groupCode": "MD.EMPQUOTA",
+                    "groupName": "Hạn mức phân khúc từ",
+                    "valueCode": "MD.EMPQUOTA.PKT",
+                    "valueName": "Phân khúc từ",
+                    "customData": {
+                    "unit": {
+                        "name": "Tỷ Đồng"
+                    }
+                    },
+                    "isActive": true
+                }
+                },
+                {
+                "id": 53,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "typeId": 104,
+                "employeeId": 13,
+                "value": 100,
+                "isActive": true,
+                "type": {
+                    "id": 104,
+                    "createdAt": "2020-10-09T05:36:02.557Z",
+                    "updatedAt": "2020-10-09T08:00:55.278Z",
+                    "groupId": 52,
+                    "parentId": null,
+                    "groupCode": "MD.EMPQUOTA",
+                    "groupName": "Hạn mức phân khúc đến",
+                    "valueCode": "MD.EMPQUOTA.PKD",
+                    "valueName": "Phân khúc đến",
+                    "customData": {
+                    "unit": {
+                        "name": "Tỷ Đồng"
+                    }
+                    },
+                    "isActive": true
+                }
+                },
+                {
+                "id": 54,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "typeId": 105,
+                "employeeId": 13,
+                "value": 6,
+                "isActive": true,
+                "type": {
+                    "id": 105,
+                    "createdAt": "2020-10-09T05:37:26.756Z",
+                    "updatedAt": "2020-10-09T08:02:35.423Z",
+                    "groupId": 46,
+                    "parentId": null,
+                    "groupCode": "MD.EMPQUOTA.SLBDS",
+                    "groupName": "Hạn mức bất động sản",
+                    "valueCode": "slbđs",
+                    "valueName": "Số lượng bất động sản",
+                    "customData": {
+                    "unit": {
+                        "name": "Thông tin"
+                    }
+                    },
+                    "isActive": true
+                }
+                },
+                {
+                "id": 55,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "typeId": 106,
+                "employeeId": 13,
+                "value": 8,
+                "isActive": true,
+                "type": {
+                    "id": 106,
+                    "createdAt": "2020-10-09T05:37:43.030Z",
+                    "updatedAt": "2020-10-09T08:01:44.153Z",
+                    "groupId": 53,
+                    "parentId": null,
+                    "groupCode": "MD.EMPQUOTA.THM",
+                    "groupName": "Hạn mức tổng",
+                    "valueCode": "summary",
+                    "valueName": "Tổng hạn mức",
+                    "customData": {
+                    "unit": {
+                        "name": "Tỷ Đồng"
+                    }
+                    },
+                    "isActive": true
+                }
+                },
+                {
+                "id": 56,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "typeId": 107,
+                "employeeId": 13,
+                "value": 10,
+                "isActive": true,
+                "type": {
+                    "id": 107,
+                    "createdAt": "2020-10-09T05:38:21.733Z",
+                    "updatedAt": "2020-10-09T08:02:14.040Z",
+                    "groupId": 45,
+                    "parentId": null,
+                    "groupCode": "MD.EMPQUOTA",
+                    "groupName": "Hạn mức",
+                    "valueCode": "MD.EMPQUOTA.SLQT",
+                    "valueName": "BĐS quan tâm",
+                    "customData": {
+                    "unit": {
+                        "name": "Thông tin"
+                    }
+                    },
+                    "isActive": true
+                }
+                }
+            ],
+            "employeeRegions": [
+                {
+                "id": 44,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "cityId": 61,
+                "wardId": 62,
+                "employeeId": 13,
+                "isActive": true,
+                "city": {
+                    "id": 61,
+                    "createdAt": "2020-10-09T04:52:36.595Z",
+                    "updatedAt": "2020-10-09T04:52:36.595Z",
+                    "groupId": 35,
+                    "parentId": null,
+                    "groupCode": "MD.CITY",
+                    "groupName": "Thành phố",
+                    "valueCode": "hcm",
+                    "valueName": "Hồ Chí Minh",
+                    "customData": null,
+                    "isActive": true
+                },
+                "ward": {
+                    "id": 62,
+                    "createdAt": "2020-10-09T04:52:57.875Z",
+                    "updatedAt": "2020-10-09T04:52:57.875Z",
+                    "groupId": 36,
+                    "parentId": 61,
+                    "groupCode": "MD.DISTRICT",
+                    "groupName": "Quận",
+                    "valueCode": "q1",
+                    "valueName": "Quận 1",
+                    "customData": null,
+                    "isActive": true
+                }
+                },
+                {
+                "id": 45,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "cityId": 61,
+                "wardId": 64,
+                "employeeId": 13,
+                "isActive": true,
+                "city": {
+                    "id": 61,
+                    "createdAt": "2020-10-09T04:52:36.595Z",
+                    "updatedAt": "2020-10-09T04:52:36.595Z",
+                    "groupId": 35,
+                    "parentId": null,
+                    "groupCode": "MD.CITY",
+                    "groupName": "Thành phố",
+                    "valueCode": "hcm",
+                    "valueName": "Hồ Chí Minh",
+                    "customData": null,
+                    "isActive": true
+                },
+                "ward": {
+                    "id": 64,
+                    "createdAt": "2020-10-09T04:53:25.447Z",
+                    "updatedAt": "2020-10-09T04:53:25.447Z",
+                    "groupId": 36,
+                    "parentId": 61,
+                    "groupCode": "MD.DISTRICT",
+                    "groupName": "Quận",
+                    "valueCode": "q3",
+                    "valueName": "Quận 3",
+                    "customData": null,
+                    "isActive": true
+                }
+                },
+                {
+                "id": 46,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "cityId": 61,
+                "wardId": 66,
+                "employeeId": 13,
+                "isActive": true,
+                "city": {
+                    "id": 61,
+                    "createdAt": "2020-10-09T04:52:36.595Z",
+                    "updatedAt": "2020-10-09T04:52:36.595Z",
+                    "groupId": 35,
+                    "parentId": null,
+                    "groupCode": "MD.CITY",
+                    "groupName": "Thành phố",
+                    "valueCode": "hcm",
+                    "valueName": "Hồ Chí Minh",
+                    "customData": null,
+                    "isActive": true
+                },
+                "ward": {
+                    "id": 66,
+                    "createdAt": "2020-10-09T04:53:59.947Z",
+                    "updatedAt": "2020-10-09T04:53:59.947Z",
+                    "groupId": 36,
+                    "parentId": 61,
+                    "groupCode": "MD.DISTRICT",
+                    "groupName": "Quận",
+                    "valueCode": "q5",
+                    "valueName": "Quận 5",
+                    "customData": null,
+                    "isActive": true
+                }
+                },
+                {
+                "id": 47,
+                "createdAt": "2020-10-16T04:36:25.937Z",
+                "updatedAt": "2020-10-16T04:36:25.937Z",
+                "createdBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "updatedBy": {
+                    "id": 2,
+                    "type": "Admin",
+                    "identityName": "admin",
+                    "code": "admin",
+                    "displayName": "admin"
+                },
+                "cityId": 61,
+                "wardId": 67,
+                "employeeId": 13,
+                "isActive": false,
+                "city": {
+                    "id": 61,
+                    "createdAt": "2020-10-09T04:52:36.595Z",
+                    "updatedAt": "2020-10-09T04:52:36.595Z",
+                    "groupId": 35,
+                    "parentId": null,
+                    "groupCode": "MD.CITY",
+                    "groupName": "Thành phố",
+                    "valueCode": "hcm",
+                    "valueName": "Hồ Chí Minh",
+                    "customData": null,
+                    "isActive": true
+                },
+                "ward": {
+                    "id": 67,
+                    "createdAt": "2020-10-09T04:54:20.404Z",
+                    "updatedAt": "2020-10-09T04:54:20.404Z",
+                    "groupId": 36,
+                    "parentId": 61,
+                    "groupCode": "MD.DISTRICT",
+                    "groupName": "Quận",
+                    "valueCode": "qtanbinh",
+                    "valueName": "Quận Tân Bình",
+                    "customData": null,
+                    "isActive": true
+                }
+                }
+            ],
+            "department": {
+                "id": 99,
+                "createdAt": "2020-10-09T05:29:17.562Z",
+                "updatedAt": "2020-10-09T05:29:17.562Z",
+                "groupId": 42,
+                "parentId": null,
+                "groupCode": "MD.DEPARTMENT",
+                "groupName": "Phòng ban",
+                "valueCode": "kinhdoanh",
+                "valueName": "Phòng kinh doanh",
+                "customData": null,
+                "isActive": true
+            },
+            "title": {
+                "id": 100,
+                "createdAt": "2020-10-09T05:30:09.924Z",
+                "updatedAt": "2020-10-09T05:30:09.924Z",
+                "groupId": 43,
+                "parentId": null,
+                "groupCode": "MD.EMPTITLE",
+                "groupName": "Cấp bậc",
+                "valueCode": "nv",
+                "valueName": "Nhân viên",
+                "customData": null,
+                "isActive": true
+            },
+            "manager": {
+                "id": 8,
+                "createdAt": "2020-10-09T05:35:55.253Z",
+                "updatedAt": "2020-10-13T00:39:45.055Z",
+                "code": "EmP-01",
+                "fullName": "Phạm Văn A",
+                "birthday": "1900-10-06",
+                "joinedDate": "2020-10-08",
+                "phone": "0987176433",
+                "email": "test@gmail.com",
+                "departmentId": 99,
+                "titleId": 101,
+                "managerId": null,
+                "statusId": 102
+            },
+            "status": {
+                "id": 102,
+                "createdAt": "2020-10-09T05:32:28.436Z",
+                "updatedAt": "2020-10-09T05:32:28.436Z",
+                "groupId": 44,
+                "parentId": null,
+                "groupCode": "MD.EMPSTATUS",
+                "groupName": "Tình trạng nhân viên",
+                "valueCode": "doing",
+                "valueName": "Chưa bị đuổi",
+                "customData": null,
+                "isActive": true
+            }
+        }
+    ],
+    "accounts": [
+        {
+            "id": 2,
+            "type": "Admin",
+            "identityName": "admin",
+            "code": "admin",
+            "displayName": "admin",
+            "hash": "$10$et004WSj2abGMt/4NZJZXegJXlu3KjpbEgZ6dsxezp0fqcSgnUHkK",
+            "isActive": true,
+            "lastLoginAt": "2020-10-13T02:15:43.463Z",
+            "employeeId": 8,
+            "collaboratorId": 1
+        }
+    ]
+}

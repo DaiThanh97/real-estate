@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "group": "Bất động sản",
+    "action": "bds.gui_duyet",
+    "raw": "Bất động sản {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" BDS"
+  },
+  {
+    "id": 2,
+    "group": "Bất động sản",
+    "action": "bds.phe_duyet",
+    "raw": "Bất động sản {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" BDS"
+  },
+  {
+    "id": 3,
+    "group": "Bất động sản",
+    "action": "bds.tu_choi",
+    "raw": "Bất động sản {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" BDS"
+  },
+  {
+    "id": 4,
+    "group": "Bất động sản",
+    "action": "bds.yeu_cau_dinh_gia",
+    "raw": "Bất động sản {{ refCode }} vừa được gửi yêu cầu định giá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Yêu cầu định giá\" BDS"
+  },
+  {
+    "id": 5,
+    "group": "Bất động sản",
+    "action": "bds.tiep_nhan",
+    "raw": "Bất động sản {{ refCode }} vừa được tiếp nhận bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Tiếp nhận\" BDS"
+  },
+  {
+    "id": 6,
+    "group": "Bất động sản",
+    "action": "bds.da_giao_dich",
+    "raw": "Bất động sản {{ refCode }} vừa được đánh dấu đã giao dịch bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Đã giao dịch\" của BDS"
+  },
+  {
+    "id": 7,
+    "group": "Bất động sản",
+    "action": "bds.cap_nhat_gia_ban",
+    "raw": "Bất động sản {{ refCode }} vừa được cập nhật giá bán bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Cập nhật giá bán\" của BDS"
+  },
+  {
+    "id": 8,
+    "group": "Bất động sản",
+    "action": "bds.xoa_nhap",
+    "raw": "Bất động sản {{ refCode }} vừa được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của BDS 'Nháp'"
+  },
+  {
+    "id": 9,
+    "group": "Bất động sản",
+    "action": "bds.da_mua",
+    "raw": "Bất động sản {{ refCode }} vừa được đánh dấu đã mua bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Đã mua\" của BDS"
+  },
+  {
+    "id": 10,
+    "group": "Bất động sản",
+    "action": "bds.da_ban",
+    "raw": "Bất động sản {{ refCode }} vừa được đánh dấu đã bán bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Đã bán\" của BDS"
+  },
+  {
+    "id": 11,
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.gui_duyet",
+    "raw": "Khảo sát hiện trạng {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" KSHT"
+  },
+  {
+    "id": 12,
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.phe_duyet",
+    "raw": "Khảo sát hiện trạng {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" KSHT"
+  },
+  {
+    "id": 13,
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.tu_choi",
+    "raw": "Khảo sát hiện trạng {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" KSHT"
+  },
+  {
+    "id": 14,
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.xoa",
+    "raw": "Khảo sát hiện trạng {{ refCode }} vừa bị xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của KSHT"
+  },
+  {
+    "id": 15,
+    "group": "Thẩm định hiện trạng",
+    "action": "th.hoan_thanh",
+    "raw": "Thẩm định hiện trạng {{ refCode }} vừa được hoàn thành bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Hoàn thành\" TDHT"
+  },
+  {
+    "id": 16,
+    "group": "Thẩm định hiện trạng",
+    "action": "th.gui_duyet",
+    "raw": "Thẩm định hiện trạng {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" TDHT"
+  },
+  {
+    "id": 17,
+    "group": "Thẩm định hiện trạng",
+    "action": "th.phe_duyet",
+    "raw": "Thẩm định hiện trạng {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" TDHT"
+  },
+  {
+    "id": 18,
+    "group": "Thẩm định hiện trạng",
+    "action": "th.tu_choi",
+    "raw": "Thẩm định hiện trạng {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" TDHT"
+  },
+  {
+    "id": 19,
+    "group": "Thẩm định hiện trạng",
+    "action": "th.xoa",
+    "raw": "Thẩm định hiện trạng {{ refCode }} vừa bị xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của TDHT"
+  },
+  {
+    "id": 20,
+    "group": "Phương án đầu tư",
+    "action": "pd.gui_duyet",
+    "raw": "Phương án đầu tư {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" PADT"
+  },
+  {
+    "id": 21,
+    "group": "Phương án đầu tư",
+    "action": "pd.phe_duyet",
+    "raw": "Phương án đầu tư {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" PADT"
+  },
+  {
+    "id": 22,
+    "group": "Phương án đầu tư",
+    "action": "pd.tu_choi",
+    "raw": "Phương án đầu tư {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" PADT"
+  },
+  {
+    "id": 23,
+    "group": "Phương án đầu tư",
+    "action": "pd.xoa",
+    "raw": "Phương án đầu tư {{ refCode }} vừa bị xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của PADT"
+  },
+  {
+    "id": 24,
+    "group": "Thẩm định ước tính",
+    "action": "tu.hoan_thanh",
+    "raw": "Thẩm định ước tính {{ refCode }} vừa được hoàn thành bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Hoàn thành\" TDUT"
+  },
+  {
+    "id": 25,
+    "group": "Thẩm định ước tính",
+    "action": "tu.gui_duyet",
+    "raw": "Thẩm định ước tính {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" TDUT"
+  },
+  {
+    "id": 26,
+    "group": "Thẩm định ước tính",
+    "action": "tu.phe_duyet",
+    "raw": "Thẩm định ước tính {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" TDUT"
+  },
+  {
+    "id": 27,
+    "group": "Thẩm định ước tính",
+    "action": "tu.tu_choi",
+    "raw": "Thẩm định ước tính {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" TDUT"
+  },
+  {
+    "id": 28,
+    "group": "Thẩm định ước tính",
+    "action": "tu.xoa",
+    "raw": "Thẩm định ước tính {{ refCode }} vừa bị xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của TDUT"
+  },
+  {
+    "id": 29,
+    "group": "Thương lượng dự án",
+    "action": "tl.gui_duyet",
+    "raw": "Thương lượng dự án {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" TLDA"
+  },
+  {
+    "id": 30,
+    "group": "Thương lượng dự án",
+    "action": "tl.phe_duyet",
+    "raw": "Thương lượng dự án {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" TLDA"
+  },
+  {
+    "id": 31,
+    "group": "Thương lượng dự án",
+    "action": "tl.tu_choi",
+    "raw": "Thương lượng dự án {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" TLDA"
+  },
+  {
+    "id": 32,
+    "group": "Thương lượng dự án",
+    "action": "tl.xoa",
+    "raw": "Thương lượng dự án {{ refCode }} vừa bị xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của TLDA"
+  },
+  {
+    "id": 33,
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.gui_duyet",
+    "raw": "Hiệu quả đầu tư {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" HQDT"
+  },
+  {
+    "id": 34,
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.tu_choi",
+    "raw": "Hiệu quả đầu tư {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" HQDT"
+  },
+  {
+    "id": 35,
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.xoa",
+    "raw": "Hiệu quả đầu tư {{ refCode }} vừa bị xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của HQDT"
+  },
+  {
+    "id": 36,
+    "group": "Khảo sát ước tính",
+    "action": "ku.gui_duyet",
+    "raw": "Khảo sát ước tính {{ refCode }} vừa được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" KSUT"
+  },
+  {
+    "id": 37,
+    "group": "Khảo sát ước tính",
+    "action": "ku.phe_duyet",
+    "raw": "Khảo sát ước tính {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" KSUT"
+  },
+  {
+    "id": 38,
+    "group": "Khảo sát ước tính",
+    "action": "ku.tu_choi",
+    "raw": "Khảo sát ước tính {{ refCode }} vừa bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" KSUT"
+  },
+  {
+    "id": 39,
+    "group": "Khảo sát ước tính",
+    "action": "ku.xoa",
+    "raw": "Khảo sát ước tính {{ refCode }} vừa bị xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của KSUT"
+  },
+  {
+    "id": 40,
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.phe_duyet",
+    "raw": "Hiệu quả đầu tư {{ refCode }} vừa được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" HQDT"
+  }
+]

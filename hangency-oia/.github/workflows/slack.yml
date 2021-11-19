@@ -1,0 +1,34 @@
+name: Slack Notification
+
+on:
+  workflow_call:
+    inputs:
+      title:
+        required: true
+        type: string
+      message:
+        required: true
+        type: string
+      color:
+        required: true
+        type: string
+
+env:
+  GITHUB_NAME: GitHub Bot
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: Slack Notification Deploy K8s Success
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: ops-connectivity
+          SLACK_COLOR: ${{ inputs.color }}
+          SLACK_ICON: https://github.com/rtCamp.png?size=48
+          SLACK_MESSAGE: ${{ inputs.message }}
+          SLACK_TITLE: ${{ inputs.title }}
+          SLACK_USERNAME: ${{ GITHUB_NAME }}
+          SLACK_WEBHOOK: https://hooks.slack.com/services/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

@@ -1,0 +1,19 @@
+version: "2"
+
+checks:
+  method-lines:
+    config:
+      threshold: 50
+exclude_patterns:
+  - "node_modules"
+  - "swagger"
+  - "package-lock.json"
+  - "yarn.lock"
+  - "migrations"
+  - "coverage"
+  - "src/**/__tests__/**/*"
+  - "**/*.spec.ts"
+  - "**/*.spec.js"
+  - "**/*.test.ts"
+  - "**/*.test.js"
+  - "**/__mocks__/*"

@@ -1,0 +1,18 @@
+{
+  "name": "default",
+  "type": "postgres",
+  "host": "localhost",
+  "port": 5432,
+  "username": "",
+  "password": "",
+  "database": "hagency",
+  "synchronize": false,
+  "logging": false,
+  "maxQueryExecutionTime": 1000,
+  "entities": ["src/infrastructure/database/mapper/*.{ts,js}"],
+  "migrations": ["migrations/**/*.{ts,js}"],
+  "cli": {
+    "entitiesDir": "src/infrastructure/database/mapper",
+    "migrationsDir": "migrations"
+  }
+}

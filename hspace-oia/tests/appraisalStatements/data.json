@@ -1,0 +1,259 @@
+{
+    "appraisalStatement": {
+        "resultAuditPPSS": {
+            "THGTCTXD": 0,
+            "THGTDPPSS": 0,
+            "THHSDCTSTD": 0,
+            "THTLDCCTDV": 0,
+            "THDGDBQPPSS": 0,
+            "THDGDTDPPSS": 0,
+            "THGTTSTDPPSS": 0
+        },
+        "generalInfoPPDG": {
+            "THND": "2020-11-02T00:00:00.000Z",
+            "THDTC": 0,
+            "THDGDDG": 0
+        },
+        "adjustControlPPDG": {
+            "THTMDC": 0,
+            "THDCYTK7": {
+                "label": "string",
+                "value": 0
+            },
+            "THDCYTGT2": {
+                "label": "string",
+                "value": 0
+            },
+            "THDCYTKV5": {
+                "label": "string",
+                "value": 0
+            },
+            "THDCYTQC4": {
+                "label": "string",
+                "value": 0
+            },
+            "THDCYTTT6": {
+                "label": "string",
+                "value": 0
+            },
+            "THHSDCMTH1": {
+                "label": "string",
+                "value": 0
+            },
+            "THDCYTMDSU3": {
+                "label": "string",
+                "value": 0
+            }
+        },
+        "resultAuditPPDG": {
+            "THGTCTXD": 0,
+            "THDGDPPDG": 0,
+            "THGTDPPDG": 0,
+            "THHSDCTSTD": 0,
+            "THTLDCCTDV": 0,
+            "THDGDTDPPDG": 0,
+            "THGTTSTDPPDG": 0
+        },
+        "property": {
+            "id": 44,
+            "streetNumber": "09/1",
+            "cityId": 61,
+            "districtId": 62,
+            "wardId": 68,
+            "streetId": 73,
+            "locationTypeId": 98,
+            "urgentLevelId": 97,
+            "generalNote": "test 91",
+            "price": 91,
+            "longitude": null,
+            "latitude": null,
+            "attachments": [
+                
+            ],
+            "landPlot": "91",
+            "map": "91",
+            "horizontalFront": 91,
+            "horizontalBack": 91,
+            "height1": 91,
+            "height2": 91,
+            "propertyTypeId": 113,
+            "propertyPeriodId": 115,
+            "propertyUsingId": 114,
+            "recognizedArea": 91,
+            "unrecognizedArea": 91,
+            "recognizedPlanningArea": 91,
+            "constructionCurrentStage": "Có công trình",
+            "groundFloors": 9,
+            "mezzanines": 9,
+            "basements": 9,
+            "roofs": 9,
+            "structure": "9",
+            "recognizedFloorArea": 9,
+            "unrecognizedFloorArea": 9,
+            "constructionNote": "91 note ",
+            "sourceId": 2,
+            "dealStage": "Đang giao dịch",
+            "businessStatus": "Đang thẩm định",
+            "transactionDate": null,
+            "broker": null,
+            "closedDealValue": null,
+            "status": "Đã duyệt",
+            "isActive": true,
+            "code": "BDS20q10001",
+            "description": "09/1 mota"
+        },
+        "inspectionStatement": {
+            "noteId": "KH20q1000102",
+            "status": "Nháp",
+            "rejectionNote": "",
+            "approvedAt": null,
+            "noteType": "Hiện trạng",
+            "executionDate": "2020-11-02T00:00:00.000Z",
+            "assigneeId": null,
+            "companyId": null,
+            "instructorId": null,
+            "propertyId": 44,
+            "streetNumber": "09/1",
+            "cityId": 61,
+            "wardId": 68,
+            "districtId": 62,
+            "streetId": 73,
+            "streetGroupId": null,
+            "positionGroupId": null,
+            "address": "",
+            "otherAddress": false,
+            "locationDescription": "",
+            "closedDealValue": null,
+            "transactionDate": null,
+            "brokerId": null,
+            "landUseRights": null,
+            "construction": null,
+            "totalAdjustment": null,
+            "marketLandUnitPrice": null,
+            "id": 2,
+            "createdAt": "2020-11-02T15:01:28.332Z",
+            "updatedAt": "2020-11-02T15:01:28.332Z"
+        },
+        "city": {
+            "id": 61,
+            "valueCode": "hcm",
+            "valueName": "Hồ Chí Minh",
+            "isActive": true
+        },
+        "district": {
+            "id": 62,
+            "valueCode": "q1",
+            "valueName": "Quận 1",
+            "isActive": true
+        },
+        "ward": {
+            "id": 68,
+            "valueCode": "bennghe",
+            "valueName": "Bến Nghé",
+            "isActive": true
+        },
+        "street": {
+            "id": 73,
+            "valueCode": "cmt8",
+            "valueName": "Cách Mạng Tháng Tám",
+            "isActive": true
+        },
+        "assignee": {
+            "id": 2,
+            "type": "Employee",
+            "identityName": "admin",
+            "code": "admin",
+            "displayName": "admin"
+        },
+        "instructor": null,
+        "approvedBy": null,
+        "completedBy": null,
+        "executionBy": null,
+        "noteId": "TH20q10001",
+        "status": "Từ chối",
+        "rejectionNote": "12344",
+        "approvedAt": null,
+        "completedAt": null,
+        "rejectedAt": null,
+        "noteType": "Hiện trạng",
+        "executionDate": "2020-10-31T00:00:00.000Z",
+        "assigneeId": 2,
+        "propertyId": 44,
+        "inspectionStatementId": 2,
+        "address": "3243443",
+        "streetNumber": "09/1",
+        "cityId": 61,
+        "districtId": 62,
+        "wardId": 68,
+        "streetId": 73,
+        "landUnitPricePPSS": 0,
+        "propertyUnitPricePPSS": 0,
+        "landUnitPricePPDG": 0,
+        "propertyUnitPricePPDG": 0,
+        "id": 1,
+        "createdAt": "2020-11-02T15:01:39.009Z",
+        "updatedAt": "2020-11-02T16:06:21.751Z",
+        "createdBy": {
+            "id": 2,
+            "type": "Employee",
+            "identityName": "admin",
+            "code": "admin",
+            "displayName": "admin"
+        },
+        "updatedBy": {
+            "id": 2,
+            "type": "Employee",
+            "identityName": "admin",
+            "code": "admin",
+            "displayName": "admin"
+        }
+    },
+    "property": {
+        "id": 44,
+        "streetNumber": "09/1",
+        "cityId": 61,
+        "districtId": 62,
+        "wardId": 68,
+        "streetId": 73,
+        "locationTypeId": 98,
+        "urgentLevelId": 97,
+        "generalNote": "test 91",
+        "price": 91,
+        "longitude": null,
+        "latitude": null,
+        "attachments": [
+            
+        ],
+        "landPlot": "91",
+        "map": "91",
+        "horizontalFront": 91,
+        "horizontalBack": 91,
+        "height1": 91,
+        "height2": 91,
+        "propertyTypeId": 113,
+        "propertyPeriodId": 115,
+        "propertyUsingId": 114,
+        "recognizedArea": 91,
+        "unrecognizedArea": 91,
+        "recognizedPlanningArea": 91,
+        "constructionCurrentStage": "Có công trình",
+        "groundFloors": 9,
+        "mezzanines": 9,
+        "basements": 9,
+        "roofs": 9,
+        "structure": "9",
+        "recognizedFloorArea": 9,
+        "unrecognizedFloorArea": 9,
+        "constructionNote": "91 note ",
+        "sourceId": 2,
+        "dealStage": "Đang giao dịch",
+        "businessStatus": "Đang thẩm định",
+        "transactionDate": null,
+        "broker": null,
+        "closedDealValue": null,
+        "status": "Đã duyệt",
+        "isActive": true,
+        "code": "BDS20q10001",
+        "description": "09/1 mota"
+    }
+}

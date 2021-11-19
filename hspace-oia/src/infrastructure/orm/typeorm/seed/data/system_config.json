@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "created_at": "2021-01-29 14:59:03.000000",
+    "updated_at": "2021-01-29 14:59:05.000000",
+    "is_active": true,
+    "name": "api.check_permission",
+    "data": "{\"type\": \"bool\", \"value\": false}",
+    "description": "Check API permission ",
+    "folder": "api",
+    "example": "{ value: true, type: \"bool\"}",
+    "created_by": null,
+    "updated_by": null
+  },
+  {
+    "id": 2,
+    "created_at": "2021-01-29 14:59:03.000000",
+    "updated_at": "2021-01-29 14:59:05.000000",
+    "is_active": true,
+    "name": "api.check_policy",
+    "data": "{\"type\": \"bool\", \"value\": true}",
+    "description": "Check backend policy ",
+    "folder": "api",
+    "example": "{ value: true, type: \"bool\"}",
+    "created_by": null,
+    "updated_by": null
+  }
+]

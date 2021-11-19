@@ -1,0 +1,522 @@
+[
+  {
+    "id": 1,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Gửi duyệt\" BDS"
+  },
+  {
+    "id": 2,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.luu",
+    "raw": "Bất động sản {{ refCode }} vừa được tạo bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Lưu\" ở màn hình Tạo BDS"
+  },
+  {
+    "id": 3,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Duyệt\" BDS"
+  },
+  {
+    "id": 4,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.tu_choi",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Từ chối\" BDS"
+  },
+  {
+    "id": 5,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.yeu_cau_dinh_gia",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi yêu cầu định giá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Yêu cầu định giá\" BDS"
+  },
+  {
+    "id": 6,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.tiep_nhan",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được tiếp nhận bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Tiếp nhận\" BDS"
+  },
+  {
+    "id": 7,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.cap_nhat_nguon_tin",
+    "raw": "Bất động sản {{ refCode }} đã thay đổi người thực hiện thành {{ new }} bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User cập nhật \"Nguồn tin\" (giao việc) của BDS lưu lại giá trị 'Nguồn tin' mới"
+  },
+  {
+    "id": 8,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.da_giao_dich",
+    "raw": "{{ refCode }}  {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được đánh dấu đã giao dịch bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Đã giao dịch\" của BDS"
+  },
+  {
+    "id": 9,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.cap_nhat_gia_ban",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được cập nhật giá bán bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Cập nhật giá bán\" của BDS"
+  },
+  {
+    "id": 10,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.xoa_nhap",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của BDS 'Nháp'"
+  },
+  {
+    "id": 11,
+    "created_at": "2021-01-24 15:38:11.647748",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Xoá\" của BDS 'Đã duyệt'"
+  },
+  {
+    "id": 12,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.da_mua",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được đánh dấu đã mua bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Đã mua\" của BDS"
+  },
+  {
+    "id": 13,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Gửi duyệt' KSHT"
+  },
+  {
+    "id": 14,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Duyệt' KSHT"
+  },
+  {
+    "id": 15,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.tu_choi",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' KSHT"
+  },
+  {
+    "id": 16,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.cap_nhat_nguoi_thuc_hien",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} đã thay đổi người thực hiện thành {{ new }} bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User cập nhật 'Thực hiện' (giao việc) của KSHT lưu lại giá trị người 'Thực hiện' mới"
+  },
+  {
+    "id": 17,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Khảo sát hiện trạng",
+    "action": "kh.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Xoá' của KSHT 'Đã duyệt'"
+  },
+  {
+    "id": 18,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Khảo sát ước tính",
+    "action": "ku.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Gửi duyệt' KSUT"
+  },
+  {
+    "id": 19,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Khảo sát ước tính",
+    "action": "ku.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Duyệt' KSUT"
+  },
+  {
+    "id": 20,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Khảo sát ước tính",
+    "action": "ku.tu_choi",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' KSUT"
+  },
+  {
+    "id": 21,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Khảo sát ước tính",
+    "action": "ku.cap_nhat_nguoi_thuc_hien",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} đã thay đổi người thực hiện thành {{ new }} bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User cập nhật 'Thực hiện' (giao việc) của KSUT lưu lại giá trị người 'Thực hiện' mới"
+  },
+  {
+    "id": 22,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Khảo sát ước tính",
+    "action": "ku.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Xoá' của KSUT 'Đã duyệt'"
+  },
+  {
+    "id": 23,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Gửi duyệt' TDHT"
+  },
+  {
+    "id": 24,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Duyệt' TDHT"
+  },
+  {
+    "id": 25,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.tu_choi",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' TDHT"
+  },
+  {
+    "id": 26,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.cap_nhat_nguoi_thuc_hien",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} đã thay đổi người thực hiện thành {{ new }} bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User cập nhật 'Thực hiện' (giao việc) của TDHT lưu lại giá trị người 'Thực hiện' mới"
+  },
+  {
+    "id": 27,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Xoá' của TDHT 'Đã duyệt'"
+  },
+  {
+    "id": 28,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.hoan_thanh",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được hoàn thành bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Hoàn thành' của TDHT 'Đã duyệt'"
+  },
+  {
+    "id": 29,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Phương án đầu tư",
+    "action": "pd.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Gửi duyệt' PAĐT"
+  },
+  {
+    "id": 30,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Phương án đầu tư",
+    "action": "pd.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Duyệt' PAĐT"
+  },
+  {
+    "id": 31,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Phương án đầu tư",
+    "action": "pd.tu_choi",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' PAĐT"
+  },
+  {
+    "id": 32,
+    "created_at": "2021-02-26 08:01:53.362195",
+    "updated_at": "2021-02-26 08:01:53.362195",
+    "group": "Phương án đầu tư",
+    "action": "pd.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Xoá' của PAĐT 'Đã duyệt'"
+  },
+  {
+    "id": 33,
+    "created_at": "2021-03-01 08:01:53.362195",
+    "updated_at": "2021-03-01 08:01:53.362195",
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Gửi duyệt' HQĐT"
+  },
+  {
+    "id": 34,
+    "created_at": "2021-03-01 08:01:53.362195",
+    "updated_at": "2021-03-01 08:01:53.362195",
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Duyệt' HQĐT"
+  },
+  {
+    "id": 35,
+    "created_at": "2021-03-01 08:01:53.362195",
+    "updated_at": "2021-03-01 08:01:53.362195",
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.tu_choi",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' HQĐT"
+  },
+  {
+    "id": 36,
+    "created_at": "2021-03-01 08:01:53.362195",
+    "updated_at": "2021-03-01 08:01:53.362195",
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.cap_nhat_nguoi_thuc_hien",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} đã thay đổi người thực hiện thành {{ new }} bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User cập nhật 'Thực hiện' (giao việc) của HQĐT lưu lại giá trị người 'Thực hiện' mới"
+  },
+  {
+    "id": 37,
+    "created_at": "2021-03-01 08:01:53.362195",
+    "updated_at": "2021-03-01 08:01:53.362195",
+    "group": "Hiệu quả đầu tư",
+    "action": "hd.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Xoá' của HQĐT 'Đã duyệt'"
+  },
+  {
+    "id": 38,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thẩm định ước tính",
+    "action": "tu.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Gửi duyệt' TDUT"
+  },
+  {
+    "id": 39,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thẩm định ước tính",
+    "action": "tu.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Duyệt' TDUT"
+  },
+  {
+    "id": 40,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thẩm định ước tính",
+    "action": "tu.tu_choi_hoan_thanh",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' TDUT"
+  },
+  {
+    "id": 41,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thẩm định ước tính",
+    "action": "tu.cap_nhat_nguoi_thuc_hien",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} đã thay đổi người thực hiện thành {{ new }} bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User cập nhật 'Thực hiện' (giao việc) của TDUT lưu lại giá trị người 'Thực hiện' mới"
+  },
+  {
+    "id": 42,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thẩm định ước tính",
+    "action": "tu.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Xoá' của TDUT 'Đã duyệt'"
+  },
+  {
+    "id": 43,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thẩm định ước tính",
+    "action": "tu.hoan_thanh",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được hoàn thành {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Hoàn thành' của TDUT 'Đã duyệt'"
+  },
+  {
+    "id": 44,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.tu_choi_hoan_thanh",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' TDHT"
+  },
+  {
+    "id": 45,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Thẩm định hiện trạng",
+    "action": "th.tu_choi_goi_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' TDHT"
+  },
+  {
+    "id": 46,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thương lượng dự án",
+    "action": "tl.gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được gửi duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Gửi duyệt' TLDA"
+  },
+  {
+    "id": 47,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thương lượng dự án",
+    "action": "tl.phe_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được phê duyệt bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Duyệt' TLDA"
+  },
+  {
+    "id": 48,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thương lượng dự án",
+    "action": "tl.tu_choi",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' TLDA"
+  },
+  {
+    "id": 49,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thương lượng dự án",
+    "action": "tl.xoa_da_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được xoá bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Xoá' của TLDA 'Đã duyệt'"
+  },
+  {
+    "id": 50,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thương lượng dự án",
+    "action": "tl.luu_y_kien_quan_ly",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được cập nhật ý kiến quản lý bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Lưu' Ý kiến quản lý của TLDA 'Đã duyệt'"
+  },
+  {
+    "id": 51,
+    "created_at": "2021-03-02 08:01:53.362195",
+    "updated_at": "2021-03-02 08:50:20.513440",
+    "group": "Thẩm định ước tính",
+    "action": "tu.tu_choi_gui_duyet",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} bị từ chối bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút 'Từ chối' TDUT"
+  },
+  {
+    "id": 52,
+    "created_at": "2021-01-28 08:01:53.362195",
+    "updated_at": "2021-01-29 08:50:20.513440",
+    "group": "Bất động sản",
+    "action": "bds.da_ban",
+    "raw": "{{ refCode }} {{ streetNumber }}, {{ street }}, {{ ward }}, {{ district }} được đánh dấu đã bán bởi {{ byAccount }}.",
+    "is_active": true,
+    "description": "User nhấn nút \"Đã bán\" của BDS"
+  }
+]

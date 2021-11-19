@@ -1,0 +1,40 @@
+name: Develop CI - CD
+
+on:
+  # only for the main branch
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Validate
+  ci-delivery-validation:
+    name: CI delivery validation
+    uses: halato/hagency-oia/.github/workflows/ci-delivery-validation.yml@main
+
+  # Build and then push Docker image
+  ci-delivery-build:
+    uses: halato/hagency-oia/.github/workflows/ci-delivery-build.yml@main
+    needs: ci-delivery-validation
+    with:
+      docker_image_tag: dev
+      docker_repo_url: cr-hn-1.bizflycloud.vn/dbb25b11ac72446693ef3387e79c6240/hagency
+    secrets:
+      docker_username: ${{ secrets.DOCKER_USERNAME }}
+      docker_password: ${{ secrets.DOCKER_TOKEN }}
+
+  # Deploy new Docker image to K8s
+  cd-delivery:
+    uses: halato/hagency-oia/.github/workflows/cd-delivery.yml@main
+    needs: ci-delivery-build
+    with:
+      docker_image_tag: dev-${GITHUB_SHA}
+      docker_repo_url: cr-hn-1.bizflycloud.vn/dbb25b11ac72446693ef3387e79c6240/hagency
+      k8s_environment: hag-dev
+      k8s_namespace: hag-dev
+    secrets:
+      k8s_config: ${{ secrets.KUBE_CONF }}

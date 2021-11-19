@@ -1,0 +1,237 @@
+version: 2.1
+
+orbs:
+  aws-ecr: circleci/aws-ecr@6.15.2
+  docker: circleci/docker@1.4.0
+  slack: circleci/slack@3.4.2
+
+jobs:
+  build:
+    environment:
+      CC_TEST_REPORTER_ID: 8f4f2d50dd87dad26d4aeea1da5493d67431282ce01187908eae90cdf512a58a
+    docker:
+      - image: circleci/node:12.6.0-stretch
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - halato-api-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: Install dependencies
+          command: |
+            npm install
+      - save_cache:
+          key: halato-api-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/node_modules
+      - run:
+          name: Setup Code Climate test-reporter
+          command: |
+            curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+            chmod +x ./cc-test-reporter
+      - run:
+          name: Run tests
+          command: |
+            ./cc-test-reporter before-build
+            npm test
+            ./cc-test-reporter after-build --coverage-input-type clover --exit-code $?
+  pull-and-tag-image:
+    parameters:
+      repo:
+        type: string
+      current_tag:
+        type: string
+      new_tag:
+        type: string
+    docker:
+      - image: docker:20-git
+    steps:
+      - setup_remote_docker
+      - run:
+          name: "Install dependencies"
+          command: |
+            apk add --no-cache py-pip
+            pip install awscli
+      - run:
+          name: "Authenticate to registry"
+          command: "aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ECR_ACCOUNT_URL"
+      - run:
+          name: "Pull image"
+          command: "docker pull $AWS_ECR_ACCOUNT_URL/<<parameters.repo>>:<<parameters.current_tag>>"
+      - run:
+          name: "Tag image to new task"
+          command: "docker tag $AWS_ECR_ACCOUNT_URL/<<parameters.repo>>:<<parameters.current_tag>> $AWS_ECR_ACCOUNT_URL/<<parameters.repo>>:<<parameters.new_tag>>"
+      - run:
+          name: "Push image to ECR"
+          command: "docker push $AWS_ECR_ACCOUNT_URL/<<parameters.repo>>:<<parameters.new_tag>>"
+  deploy-qa:
+    executor: docker/docker
+    steps:
+      - slack/notify:
+          color: "#42e2f4"
+          mentions: "Duy Cao,Khanh Nguyen XB,Trinh Quang Huy"
+          message: Deploying to QA
+      - add_ssh_keys:
+          fingerprints:
+              - $SSH_KEY_FINGERPRINT_QA
+      - run: ssh -oStrictHostKeyChecking=no $DEPLOYED_USER_QA@$DEPLOYED_SERVER_QA './deploy.sh'
+      - slack/notify:
+          color: "#42f458"
+          mentions: "Duy Cao,Khanh Nguyen XB,Trinh Quang Huy"
+          message: Deploy QA success
+      - slack/status:
+          fail_only: true
+          mentions: "Duy Cao"
+  deploy-staging:
+    executor: docker/docker
+    steps:
+      - slack/notify:
+          color: "#42e2f4"
+          mentions: "Duy Cao,phatnt"
+          message: Deploying to Staging
+      - add_ssh_keys:
+          fingerprints:
+            - $SSH_KEY_FINGERPRINT_STAGING
+      - run: ssh -oStrictHostKeyChecking=no $DEPLOYED_USER_STAGING@$DEPLOYED_SERVER_STAGING './deploy.sh'
+      - slack/notify:
+          color: "#42f458"
+          mentions: "Duy Cao,phatnt"
+          message: Deploy Staging success
+      - slack/status:
+          fail_only: true
+          mentions: "Duy Cao"
+
+workflows:
+  version: 2
+  all:
+    jobs:
+      - build
+  build_and_push_image:
+    jobs:
+      - aws-ecr/build-and-push-image:
+          filters:
+            branches:
+              only:
+                - develop
+                - /releases\/.*/
+                - master
+          name: build_and_push_api_socket_image
+          dockerfile: Dockerfile
+          repo: "hspace/api_socket"
+          tag: "$CIRCLE_SHA1"
+          skip-when-tags-exist: true
+          remote-docker-layer-caching: true
+      - aws-ecr/build-and-push-image:
+          filters:
+            branches:
+              only:
+                - develop
+                - /releases\/.*/
+                - master
+          name: build_and_push_migration_image
+          dockerfile: Dockerfile.migration
+          repo: "hspace/migration"
+          tag: "$CIRCLE_SHA1"
+          skip-when-tags-exist: true
+          remote-docker-layer-caching: true
+      - pull-and-tag-image:
+          filters:
+            branches:
+              only:
+                - develop
+          name: tag_api_socket_image_to_dev-latest
+          repo: "hspace/api_socket"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "dev-latest"
+          requires:
+           - build_and_push_api_socket_image
+      - pull-and-tag-image:
+          filters:
+            branches:
+              only:
+                - develop
+          name: tag_migration_image_to_dev-latest
+          repo: "hspace/migration"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "dev-latest"
+          requires:
+           - build_and_push_migration_image
+      - pull-and-tag-image:
+          filters:
+            branches:
+              only: /releases\/.*/
+          name: tag_api_socket_image_to_rc
+          repo: "hspace/api_socket"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "rc"
+          requires:
+           - build_and_push_api_socket_image
+      - pull-and-tag-image:
+          filters:
+            branches:
+              only: /releases\/.*/
+          name: tag_migration_image_to_rc
+          repo: "hspace/migration"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "rc"
+          requires:
+           - build_and_push_migration_image
+      - pull-and-tag-image:
+          filters:
+            branches:
+              only:
+                - master
+          name: tag_api_socket_image_to_latest
+          repo: "hspace/api_socket"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "latest"
+          requires:
+           - build_and_push_api_socket_image
+      - pull-and-tag-image:
+          filters:
+            branches:
+              only:
+                - master
+          name: tag_migration_image_to_latest
+          repo: "hspace/migration"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "latest"
+          requires:
+           - build_and_push_migration_image
+      - pull-and-tag-image:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
+          name: versioning_api_socket_image
+          repo: "hspace/api_socket"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "${CIRCLE_TAG/v/''}"
+      - pull-and-tag-image:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^v.*/
+          name: versioning_migration_image
+          repo: "hspace/migration"
+          current_tag: "$CIRCLE_SHA1"
+          new_tag: "${CIRCLE_TAG/v/''}"
+      - deploy-qa:
+          filters:
+            branches:
+              only:
+                - develop
+          name: deploy-qa
+          requires:
+            - tag_api_socket_image_to_dev-latest
+            - tag_migration_image_to_dev-latest
+      - deploy-staging:
+          filters:
+            branches:
+              only: /releases\/.*/
+          name: deploy-staging
+          requires:
+            - tag_api_socket_image_to_rc
+            - tag_migration_image_to_rc

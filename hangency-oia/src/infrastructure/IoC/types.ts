@@ -1,0 +1,27 @@
+import { Token } from "typedi";
+
+export const TYPES = {
+  dBConnectionHolder: new Token<string>("DBConnectionHolder"),
+  authConnectionHolder: new Token<string>("authConnectionHolder"),
+  auth: new Token<string>("auth"),
+  propertyRepository: new Token<string>("propertyRepository"),
+  logger: new Token<string>("logger"),
+  accountRepository: new Token<string>("accountRepository"),
+  accountAccountGroupRepository: new Token<string>("accountAccountGroupRepository"),
+  accountGroupRepository: new Token<string>("accountGroupRepository"),
+  accountGroupFeatureRepository: new Token<string>("accountGroupFeatureRepository"),
+  accountGroupResourceRepository: new Token<string>("accountGroupResourceRepository"),
+  accountMenuRepository: new Token<string>("accountMenuRepository"),
+  collaboratorRepository: new Token<string>("collaboratorRepository"),
+  employeeRepository: new Token<string>("employeeRepository"),
+  employeeLimitRepository: new Token<string>("employeeLimitRepository"),
+  employeeRegionRepository: new Token<string>("employeeRegionRepository"),
+  featureRepository: new Token<string>("featureRepository"),
+  groupValueRepository: new Token<string>("groupValueRepository"),
+  masterValueRepository: new Token<string>("masterValueRepository"),
+  menuRepository: new Token<string>("menuRepository"),
+  resourceRepository: new Token<string>("resourceRepository"),
+  accountManager: new Token<string>("accountManager"),
+  fileConnectionHolder: new Token<string>("fileConnectionHolder"),
+  file: new Token<string>("file"),
+};

@@ -1,0 +1,6 @@
+{
+  "ignore": [
+    "openapi.json",
+    "*.md"
+  ]
+}

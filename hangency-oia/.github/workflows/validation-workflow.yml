@@ -1,0 +1,13 @@
+name: Validation all commits
+
+on:
+  push:
+    branches-ignore:
+      - main
+      - release/*
+
+jobs:
+  # Validate
+  ci-delivery-validation:
+    name: CI delivery validation
+    uses: halato/hagency-oia/.github/workflows/ci-delivery-validation.yml@main

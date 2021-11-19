@@ -1,0 +1,79 @@
+name: ci-delivery-build
+
+on:
+  workflow_call:
+    inputs:
+      docker_image_tag:
+        required: true
+        type: string
+      docker_repo_url:
+        required: true
+        type: string
+    secrets:
+      docker_username:
+        required: true
+      docker_password:
+        required: true
+
+jobs:
+  build-and-publish-image:
+      name: Build and publish image
+      runs-on: ubuntu-latest
+      strategy:
+        matrix:
+          node-version: [12.x]
+      steps:
+        - name: Checkout source code
+          uses: actions/checkout@v2
+
+        - name: Use Node.js ${{ matrix.node-version }}
+          uses: actions/setup-node@v1
+          with:
+            node-version: ${{ matrix.node-version }}
+
+        - name: Cache node modules
+          uses: actions/cache@v2
+          env:
+            cache-name: cache-node-modules
+          with:
+            # npm cache files are stored in `~/.npm` on Linux/macOS
+            path: ~/.npm
+            key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+            restore-keys: |
+              ${{ runner.os }}-build-${{ env.cache-name }}-
+              ${{ runner.os }}-build-
+              ${{ runner.os }}-
+
+        # Install dependencies
+        - name: Install node modules
+          if: ${{ !env.ACT }}
+          run: |
+            npm ci
+
+        - name: restore docker cache
+          if: ${{ !env.ACT }}
+          uses: satackey/action-docker-layer-caching@v0.0.11
+          # Ignore the failure of a step and avoid terminating the job.
+          continue-on-error: true
+          with:
+            key: ${{ runner.os }}-build-${{ env.cache-name }}-${GITHUB_SHA}
+            restore-keys: |
+              ${{ runner.os }}-build-${{ env.cache-name }}-
+
+        # Build Docker image
+        - name: Build Docker image
+          if: ${{ !env.ACT }}
+          run: |
+            docker build -t ${{ inputs.docker_repo_url }}:${{ inputs.docker_image_tag }}-${GITHUB_SHA} -t ${{ inputs.docker_repo_url }}:${{ inputs.docker_image_tag }} .
+
+        # Authenticate to Docker registry
+        - name: Login Docker Registry
+          if: ${{ !env.ACT }}
+          run: |
+            docker login -u ${{ secrets.docker_username }} -p ${{ secrets.docker_password }} ${{ inputs.docker_repo_url }}
+
+        # Push the Docker image to Docker Registry
+        - name: Publish Docker image
+          if: ${{ !env.ACT }}
+          run: |
+            docker push ${{ inputs.docker_repo_url }} --all-tags

@@ -1,0 +1,25 @@
+{
+    "accounts": [
+        {
+            "id": 2,
+            "type": "Admin",
+            "identityName": "admin",
+            "code": "admin",
+            "displayName": "admin",
+            "hash": "$10$et004WSj2abGMt/4NZJZXegJXlu3KjpbEgZ6dsxezp0fqcSgnUHkK",
+            "isActive": true,
+            "lastLoginAt": "2020-10-13T02:15:43.463Z",
+            "employeeId": null,
+            "collaboratorId": null,
+            "accountAccountGroups": [
+                {
+                    "accountGroupId": 1,
+                    "isActive": true,
+                    "accountGroup": {
+                        "isActive": true
+                    }
+                }
+            ]
+        }
+    ]
+}
